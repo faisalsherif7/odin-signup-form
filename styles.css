@@ -8,9 +8,14 @@
 
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 img {
     height: 102vh;
 }
 
+.content {
+    padding-left: 45px;
+    padding-right: 150px;
+}
