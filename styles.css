@@ -16,6 +16,27 @@ img {
 }
 
 .content {
+    background-color: aliceblue;
     padding-left: 45px;
     padding-right: 150px;
+}
+
+.intro-text {
+    padding-top: 110px;
+    padding-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+legend {
+    margin-bottom: 15px;
+    font-size: 1.30rem;
+}
+
+button {
+    margin-top: 10px;
 }
