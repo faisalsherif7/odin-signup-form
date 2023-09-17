@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.total-container {
+.body {
     display: flex;
 }
 
@@ -10,10 +10,7 @@ body {
     margin: 0;
 }
 
-.image-container {
-    padding: 0;
-}
-
 img {
     height: 102vh;
 }
+
