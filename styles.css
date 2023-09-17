@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.total-container {
+    display: flex;
+}
+
+body {
+    margin: 0;
+}
+
+.image-container {
+    padding: 0;
+}
+
+img {
+    height: 100vh;
+}
