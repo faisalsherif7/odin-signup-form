@@ -45,6 +45,7 @@ button {
 
 label {
     font-family: 'Work Sans', sans-serif;
+    font-size: .80rem;
 }
 
 .form-row {
@@ -55,4 +56,36 @@ label {
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 0.2px solid silver;
+    border-radius: 4px;
+}
+
+input:active {
+    border-color: yellow;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: rgb(89, 109, 72);
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(89, 109, 72);
 }
