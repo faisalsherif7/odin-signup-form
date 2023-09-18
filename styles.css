@@ -6,6 +6,8 @@
     display: flex;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -39,4 +41,18 @@ legend {
 
 button {
     margin-top: 10px;
+}
+
+label {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
