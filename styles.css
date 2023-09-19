@@ -18,6 +18,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .content {
@@ -106,5 +109,20 @@ button {
 a {
     text-decoration: none;
     color: rgb(89, 109, 72);
+}
+
+.logo {
+    height: 100px;
+    background-color: rgb(0, 0, 0, 0.4);
+    display: flex;
+    color: white;
+    font-family: 'Norse Bold';
+    font-size: 40px;
+    justify-content: center;
+}
+
+.odin-logo {
+    width: auto;
+    height: 100%;
 }
 
