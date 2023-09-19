@@ -108,19 +108,22 @@ input {
     width: 250px;
     height: 30px;
     margin-bottom: 15px;
-    border: 0.4px solid #e5e7eb;
+    border: 0.9px solid #e5e7eb;
     border-radius: 4px;
     padding: 0px 8px;
 }
 
 input:focus {
     outline-color: #1d4ed8;
-    outline-width: 0.3px;
+    outline-style: solid;
     border: 0;
 }
 
 input:invalid {
     outline-color: red;
+    outline-style: solid;
+    outline-width: 0.9px;
+    border: 0;
 }
 
 button {
