@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('Norse-Bold.otf') format('opentype');
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +13,6 @@
     display: flex;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 body {
     margin: 0;
@@ -18,9 +24,29 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     min-width: 500px;
+}
+
+.logo {
+    margin-top: 25vh;
+    height: 120px;
+    background-color: rgb(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: column;
+    color: white;
     justify-content: center;
+    font-family: 'Norse Bold';
+    padding: 10px;
+}
+
+.logo img {
+    width: auto;
+    height: 100%;
+}
+
+.logo p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 80px;
 }
 
 .content {
@@ -111,18 +137,5 @@ a {
     color: rgb(89, 109, 72);
 }
 
-.logo {
-    height: 100px;
-    background-color: rgb(0, 0, 0, 0.4);
-    display: flex;
-    color: white;
-    font-family: 'Norse Bold';
-    font-size: 40px;
-    justify-content: center;
-}
 
-.odin-logo {
-    width: auto;
-    height: 100%;
-}
 
