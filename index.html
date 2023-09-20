@@ -48,6 +48,7 @@
                                 <div class="flex-column">
                                     <label for="password">PASSWORD</label>
                                     <input type="password" name="password" id="password">
+                                    <span class="error"></span>
                                 </div>
                                 <div class="flex-column">
                                     <label for="confirm-password">CONFIRM PASSWORD</label>
@@ -65,4 +66,27 @@
         </div>
     </div>
 </body>
+<script>
+const password = document.getElementById('password');
+const confirm = document.getElementById('confirm-password');
+const span = document.querySelector('.error');
+
+addEventListener('submit', () => {
+    if (password.value !== confirm.value) {
+        event.preventDefault();
+        password.className = 'invalid';
+        confirm.className = 'invalid';
+        span.textContent = '* Passwords do not match';
+    }
+})
+
+function clearValidation() {
+span.textContent = '';
+password.className = '';
+confirm.className = '';
+}
+
+password.addEventListener('keydown', clearValidation);
+confirm.addEventListener('keydown', clearValidation);
+</script>
 </html>

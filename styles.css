@@ -96,6 +96,7 @@ label {
 .form-row {
     display: flex;
     gap: 70px;
+    margin-bottom: 15px;
 }
 
 .flex-column {
@@ -107,7 +108,6 @@ label {
 input {
     width: 250px;
     height: 30px;
-    margin-bottom: 15px;
     border: 0.9px solid #e5e7eb;
     border-radius: 4px;
     padding: 0px 8px;
@@ -142,5 +142,14 @@ a {
     color: rgb(89, 109, 72);
 }
 
+.invalid {
+    outline-color: red;
+    outline-style: solid;
+    outline-width: 0.9px;
+    border: 0;
+}
 
-
+.error {
+    color: red;
+    font-size: 0.8em;
+}
