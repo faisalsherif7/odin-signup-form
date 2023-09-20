@@ -117,6 +117,7 @@ input:focus {
     outline-color: #1d4ed8;
     outline-style: solid;
     border: 0;
+    box-shadow: 2px 2px 3px silver;
 }
 
 input:invalid {
