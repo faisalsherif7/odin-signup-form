@@ -28,16 +28,19 @@
                                 <div class="flex-column">
                                     <label for="first-name">FIRST NAME</label>
                                     <input type="text" name="first-name" id="first-name">
+                                    <span class="firstname-error error"></span>
                                 </div>
                                 <div class="flex-column">
                                     <label for="last-name">LAST NAME</label>
                                     <input type="text" name="last-name" id="last-name">
+                                    <span class="lastname-error error"></span>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="flex-column">
                                     <label for="email">EMAIL</label>
                                     <input type="email" name="email" id="email">
+                                    <span class="email-error error"></span>
                                 </div>
                                 <div class="flex-column">
                                     <label for="phone-number">PHONE NUMBER</label>
@@ -48,11 +51,12 @@
                                 <div class="flex-column">
                                     <label for="password">PASSWORD</label>
                                     <input type="password" name="password" id="password">
-                                    <span class="error"></span>
+                                    <span class="password-error error"></span>
                                 </div>
                                 <div class="flex-column">
                                     <label for="confirm-password">CONFIRM PASSWORD</label>
                                     <input type="password" name="confirm-password" id="confirm-password">
+                                    <span class="confirm-error error"></span>
                                 </div>
                             </div>
                         </fieldset>
@@ -66,27 +70,91 @@
         </div>
     </div>
 </body>
+
 <script>
+
+const firstName = document.querySelector('#first-name');
+const lastName = document.querySelector('#last-name');
+const email = document.querySelector('#email');
 const password = document.getElementById('password');
 const confirm = document.getElementById('confirm-password');
-const span = document.querySelector('.error');
+const spanPassword = document.querySelector('.password-error');
+const spanConfirm = document.querySelector('.confirm-error');
+const spanFirstName = document.querySelector('.firstname-error')
+const spanLastName = document.querySelector('.lastname-error');
+const spanEmail = document.querySelector('.email-error')
 
 addEventListener('submit', () => {
+
+    counter = 0;
+
     if (password.value !== confirm.value) {
-        event.preventDefault();
         password.className = 'invalid';
         confirm.className = 'invalid';
-        span.textContent = '* Passwords do not match';
+        spanPassword.textContent = '* Passwords do not match';
+        counter = 1;
+    }
+    if (firstName.value === '') {
+        firstName.className = 'invalid';
+        spanFirstName.textContent = '* This field is required'
+        counter = 1;
+    }
+    if (lastName.value === '') {
+        lastName.className = 'invalid';
+        spanLastName.textContent = '* This field is required'
+        counter = 1;
+    }
+    if (email.value === '') {
+        console.log('email check')
+        email.className = 'invalid';
+        spanEmail.textContent = '* This field is required'
+        counter = 1;
+    }
+    if (password.value === '') {
+        password.className = 'invalid';
+        spanPassword.textContent = '* This field is required';
+        counter = 1;
+    }
+    if (confirm.value === '') {
+        confirm.className = 'invalid';
+        spanConfirm.textContent = '* This field is required';
+        counter = 1;
+    }
+    if (counter === 1) {
+        event.preventDefault();
     }
 })
 
-function clearValidation() {
-span.textContent = '';
-password.className = '';
-confirm.className = '';
-}
 
-password.addEventListener('keydown', clearValidation);
-confirm.addEventListener('keydown', clearValidation);
+firstName.addEventListener('input', () => {
+    firstName.className = '';
+    spanFirstName.textContent = '';
+}) ;
+
+lastName.addEventListener('input', () => {
+    lastName.className = '';
+    spanLastName.textContent = '';
+});
+
+email.addEventListener('input', () => {
+    email.className = '';
+    spanEmail.textContent = '';
+});
+
+password.addEventListener('input', () => {
+    password.className = '';
+    confirm.className = '';
+    spanPassword.textContent = '';
+    spanConfirm.textContent = '';
+});
+
+confirm.addEventListener('input', () => {
+    password.className = '';
+    confirm.className = '';
+    spanPassword.textContent = '';
+    spanConfirm.textContent = '';
+});
+
 </script>
+
 </html>
