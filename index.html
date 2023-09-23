@@ -27,17 +27,17 @@
                             <div class="form-row">
                                 <div class="flex-column">
                                     <label for="first-name">FIRST NAME</label>
-                                    <input type="text" name="first-name" id="first-name" required>
+                                    <input type="text" name="first-name" id="first-name">
                                 </div>
                                 <div class="flex-column">
                                     <label for="last-name">LAST NAME</label>
-                                    <input type="text" name="last-name" id="last-name" required>
+                                    <input type="text" name="last-name" id="last-name">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="flex-column">
                                     <label for="email">EMAIL</label>
-                                    <input type="email" name="email" id="email" required>
+                                    <input type="email" name="email" id="email">
                                 </div>
                                 <div class="flex-column">
                                     <label for="phone-number">PHONE NUMBER</label>
@@ -47,12 +47,12 @@
                             <div class="form-row">
                                 <div class="flex-column">
                                     <label for="password">PASSWORD</label>
-                                    <input type="password" name="password" id="password" required>
+                                    <input type="password" name="password" id="password">
                                     <span class="error"></span>
                                 </div>
                                 <div class="flex-column">
                                     <label for="confirm-password">CONFIRM PASSWORD</label>
-                                    <input type="password" name="confirm-password" id="confirm-password" required>
+                                    <input type="password" name="confirm-password" id="confirm-password">
                                 </div>
                             </div>
                         </fieldset>
@@ -71,9 +71,9 @@ const password = document.getElementById('password');
 const confirm = document.getElementById('confirm-password');
 const span = document.querySelector('.error');
 
-addEventListener('submit', () => {
+confirm.addEventListener('input', () => {
+    console.log(`${password.value} is the password and ${confirm.value} is the confirmation`);
     if (password.value !== confirm.value) {
-        event.preventDefault();
         password.className = 'invalid';
         confirm.className = 'invalid';
         span.textContent = '* Passwords do not match';
