@@ -1,4 +1,4 @@
-# Sign-up Form Project
+# Sign-up Form
 
 ## Project Overview
 A sign-up form for an imaginary service, designed to practice HTML form elements, CSS styling, and basic JavaScript validation. It involved creating a responsive form with various input styles, background images, and form validation using pseudo-classes like `:invalid` and `:focus`.
